@@ -19,7 +19,7 @@
 
     <!--  -->
     <v-toolbar
-      style="max-height: 57px;"
+      style="max-height: 56px;"
       dark
       class="secondary"
       src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"

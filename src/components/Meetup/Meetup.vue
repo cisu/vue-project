@@ -4,18 +4,25 @@
       <v-flex xs12 class="carousel">
         <v-card class="bg-gray">
           <v-card-title>
-            <h5 class="primary--text">My Meetup</h5>
+            <h5 class="primary--text">{{ meetup.title }}</h5>
           </v-card-title>
-          <v-img src="https://www.we-love-crete.com/images/sitia-crete-dusk.jpg" height="400px"></v-img>
+          <v-img
+            src="https://www.we-love-crete.com/images/sitia-crete-dusk.jpg"
+            height="400px"
+          ></v-img>
           <v-text>
             <div>
               <v-card-subtitle>
-                <v-icon right>mdi-calendar-range</v-icon>15th July 2021 - Where it takes place
+                <v-icon right>mdi-calendar-range</v-icon>15th July 2021 - Where
+                it takes place
               </v-card-subtitle>
             </div>
-            <div
-              class="mx-6 pb-2"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum est voluptatibus optio commodi, corporis voluptas dolor necessitatibus accusantium, quod dolores, corrupti ullam. Molestiae ullam sed quae nobis hic optio qui.</div>
+            <div class="mx-6 pb-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum est
+              voluptatibus optio commodi, corporis voluptas dolor necessitatibus
+              accusantium, quod dolores, corrupti ullam. Molestiae ullam sed
+              quae nobis hic optio qui.
+            </div>
           </v-text>
           <v-card-action>
             <div class="btn-right">
@@ -52,7 +59,18 @@
   }
 }
 
-.bg-gray{
+.bg-gray {
   background-color: #f3f3f3;
 }
 </style>
+
+<script>
+export default {
+  props: ['id'],
+  computed: {
+    meetup() {
+      return this.$store.getters.loadedMeetup(this.id);
+    },
+  },
+};
+</script>

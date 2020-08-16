@@ -31,6 +31,7 @@ const routes = [
     // This goes after '/meetup/new' cuz the '/new' take id place 
       path: '/meetups/:id',
       name: 'Meetup',
+      props: true,
       component: Meetup
   },
   {

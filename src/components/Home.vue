@@ -35,22 +35,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      meetups: [
-        {
-          imageUrl: "https://www.we-love-crete.com/images/sitia-crete-dusk.jpg",
-          id: "afafa1234",
-          title: "Meetup in Crete",
-        },
-        {
-          imageUrl:
-            "https://mastermehmed.com/wp-content/uploads/2020/02/paris-shutterstock-1400x500.jpg",
-          id: "afafa5678",
-          title: "Meetup in Paris",
-        },
-      ],
-    };
+  computed: {
+    meetups () {
+      return this.$store.getters.featureMeetups
+    }
   },
   methods: {
     onLoadMeetup(id) {

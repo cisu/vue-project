@@ -23,9 +23,9 @@
                 <v-icon left light>mdi-share-variant-outline</v-icon>
                 Share</v-btn>
 
-            <v-btn color="purple" text to="">
+            <v-btn color="purple" text to="/meetups/1">
               <v-icon left light class=''>mdi-card-search-outline</v-icon>View Meetup
-            </v-btn>
+            </v-btn> 
             <v-spacer></v-spacer>
 
             <v-btn icon @click="show = !show">

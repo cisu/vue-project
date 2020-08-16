@@ -11,13 +11,14 @@
     </v-layout>
     <v-layout row wrap>
       <v-flex xs12 class="carousel">
-        <v-carousel>
+        <v-carousel style="cursor:pointer;">
           <v-carousel-item
             v-for="(meetup) in meetups"
             :key="meetup.id"
             :src="meetup.imageUrl"
             reverse-transition="fade-transition"
             transition="fade-transition"
+            @click="onLoadMeetup(meetup.id)"
           >
             <div class="title">{{ meetup.title }}</div>
           </v-carousel-item>
@@ -50,6 +51,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    onLoadMeetup(id) {
+      this.$router.push("/meetups/" + id);
+    },
   },
 };
 </script>

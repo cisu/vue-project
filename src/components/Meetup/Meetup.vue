@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <v-layout>
-      <v-flex xs12>
-        <v-card>
+      <v-flex xs12 class="carousel">
+        <v-card class="bg-gray">
           <v-card-title>
             <h5 class="primary--text">My Meetup</h5>
           </v-card-title>
@@ -19,7 +19,11 @@
           </v-text>
           <v-card-action>
             <div class="btn-right">
-              <v-btn >
+              <!-- gia na paei sthn antitheti meria -->
+              <div>
+                <!-- push the register -->
+              </div>
+              <v-btn class="mx-10 my-3 green white--text">
                 <v-icon left>mdi-pencil</v-icon>Register
               </v-btn>
             </div>
@@ -32,6 +36,23 @@
 
 <style scoped>
 .btn-right {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel {
+  max-width: 100%;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1900px) {
+  .carousel {
+    max-width: 80%;
+  }
+}
+
+.bg-gray{
+  background-color: #f3f3f3;
 }
 </style>

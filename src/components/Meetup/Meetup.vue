@@ -4,12 +4,10 @@
       <v-flex xs12 class="carousel">
         <v-card class="bg-gray">
           <v-card-title>
-            <h5 class="primary--text">{{ meetup.title }}</h5>
+            <h5 class="primary--text">la{{console.log(meetup)}}</h5>
           </v-card-title>
-          <v-img
-            src="https://www.we-love-crete.com/images/sitia-crete-dusk.jpg"
-            height="400px"
-          ></v-img>
+          <v-img src="https://www.we-love-crete.com/images/sitia-crete-dusk.jpg" height="400px"></v-img>
+        
           <v-text>
             <div>
               <v-card-subtitle>
@@ -25,6 +23,8 @@
             </div>
           </v-text>
           <v-card-action>
+
+            
             <div class="btn-right">
               <!-- gia na paei sthn antitheti meria -->
               <div>
@@ -64,13 +64,14 @@
 }
 </style>
 
+
 <script>
-export default {
-  props: ['id'],
-  computed: {
-    meetup() {
-      return this.$store.getters.loadedMeetup(this.id);
-    },
-  },
-};
+  export default {
+    props: ['id'],
+    computed: {
+      meetup () {
+          return this.$store.loadedMeetup('id')
+      }
+    }
+  }
 </script>

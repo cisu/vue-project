@@ -28,11 +28,11 @@ const routes = [
     component: CreateMeetup,
   },
   {
-    // This goes after '/meetup/new' cuz the '/new' take id place 
-      path: '/meetups/:id',
-      name: 'Meetup',
-      props: true,
-      component: Meetup
+    // This goes after '/meetup/new' cuz the '/new' take id place
+    path: '/meetups/:id',
+    name: 'Meetup',
+    props: true,
+    component: Meetup,
   },
   {
     path: '/profile',
@@ -49,15 +49,15 @@ const routes = [
     name: 'Signin',
     component: Signin,
   },
-//   {
-//     path: '/about',
-//     name: 'About',
-//     // route level code-splitting
-//     // this generates a separate chunk (about.[hash].js) for this route
-//     // which is lazy-loaded when the route is visited.
-//     component: () =>
-//       import(/* webpackChunkName: "about" */ '../views/About.vue'),
-//   },
+  //   {
+  //     path: '/about',
+  //     name: 'About',
+  //     // route level code-splitting
+  //     // this generates a separate chunk (about.[hash].js) for this route
+  //     // which is lazy-loaded when the route is visited.
+  //     component: () =>
+  //       import(/* webpackChunkName: "about" */ '../views/About.vue'),
+  //   },
 ];
 
 const router = new VueRouter({
